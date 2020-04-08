@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=B612&display=swap");
+@keyframes effect {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #0e2127;
+  font-family: "Skranji", cursive;
+  text-decoration: none;
+}
+.box-1{
+    
+    position: relative;
+    width: 40em;
+    height: 40em;
+    left: 4em;
+    top: 7.7em;
+    
+    
+}
+
+.box-2{
+
+    position: absolute;
+    width: 25.1em;
+    height: 24.3em;
+    left: 70em;
+    top: 17.4em;
+    
+}
+
+#hr .box-1{
+
+    position: absolute;
+    width: 14.8em;
+    height: 15em;
+    left: 6.6em;
+    top: 13.3em;
+}
+#sv .box-2{
+    position: absolute;
+    width: 14.7em;
+    height: 15.7em;
+    left: 70.75em;
+    top: 22.21em;
+}
+
+#fb1{
+
+
+    position: absolute;
+width: 4.2em;
+height: 4.5em;
+left: 7;
+top: 28em;
+}
+
+
+#tweet1 {
+    position: absolute;
+width: 70.61px;
+height: 72.2px;
+left: 251.09px;
+top: 500px;
+}
+
+#insta1 {
+
+    position: absolute;
+width: 86.95px;
+height: 83.16px;
+left: 338.05px;
+top: 200px;
+}
+
+#git1 {
+
+    position: absolute;
+width: 90.88px;
+height: 70.91px;
+left: 179.18px;
+top: 0;
+
+}
+
+#in1{
+
+    position: absolute;
+width: 5.62em;
+height: 80.58px;
+left: 0;
+top: 12.5em;
+}
+
+
+#fb2{
+
+
+ 
+}
+
+
+#tweet2 {
+ 
+}
+
+#insta2 {
+
+}
+
+#git2 {
+
+
+}
+
+#in2{
+
+}
