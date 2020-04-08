@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Skranji&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
+
+@keyframes effect {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  animation: effect 0.75s;
+  padding: 0;
+  margin: 0;
+  background-color: #0e2127;
+  font-family: "Skranji", cursive;
+  text-decoration: none;
+}
+nav ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em 1.5em;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 0em 0.75em;
+  background-color: #37e473;
+  text-shadow: 1px 1px 2px black;
+}
+nav a:hover {
+  color: #202020;
+}
+#top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 40vh;
+  min-width: 15vw;
+  z-index: -1;
+}
+#controller {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  z-index: -1;
+}
+main h1 {
+  color: #faff00;
+  font-size: 4em;
+  margin: 3em 0em 1em 0em;
+  text-align: center;
+  text-shadow: 2px 2px 2px black;
+}
+main h2 {
+  font-family: "Ribeye Marrow", cursive;
+  color: #00ff58;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(196, 196, 196, 0.08);
+  border: 1px solid black;
+  font-size: 2em;
+  margin: 2em 20vw;
+  border-radius: 19px;
+  text-shadow: 1px 1px 2px black;
+}
+main h3 {
+  text-align: center;
+}
+main h3 a {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+  background-color: #fc3f3f;
+
+  padding: 0.75rem 1.5rem;
+}
+main h3 a:hover {
+  text-shadow: 2px 2px 2px black;
+}
+#bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-height: 40vh;
+  min-width: 15vw;
+  z-index: -1;
+  transform: rotate(180deg);
+}
