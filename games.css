@@ -2,14 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=B612&display=swap");
+
 @keyframes effect {
   from {
     opacity: 0;
-    transform: rotateX(-10deg);
+    /*transform: rotateX(-10deg);*/
+    transform: translate(0, 100vh);
   }
   to {
     opacity: 1;
-    transform: rotateX(0deg);
+    /*transform: rotateX(0deg);*/
+    transform: translate(0, 0);
   }
 }
 
@@ -79,8 +82,7 @@ nav a:hover {
 }
 
 .gallery {
-  animation: effect 2s;
-
+  animation: effect 1s;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-column-gap: 20px;
