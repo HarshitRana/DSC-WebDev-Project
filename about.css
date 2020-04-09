@@ -2,14 +2,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=B612&display=swap");
-@keyframes effect {
+@keyframes harshit {
   from {
-    opacity: 0;
-    transform: rotateX(-10deg);
+    transform: translate(0, 100vh);
   }
   to {
-    opacity: 1;
-    transform: rotateX(0deg);
+    transform: translate(0, 0);
+  }
+}
+@keyframes sarthak {
+  from {
+    transform: translate(0, -100vh);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes harshit-text {
+  from {
+    transform: translate(100vw, 0);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+@keyframes sarthak-text {
+  from {
+    transform: translate(-100vw, 0);
+  }
+  to {
+    transform: translate(0, 0);
   }
 }
 
@@ -19,117 +41,174 @@
   box-sizing: border-box;
 }
 body {
+  position: relative;
   padding: 0;
   margin: 0;
   background-color: #0e2127;
   font-family: "Skranji", cursive;
   text-decoration: none;
 }
-.box-1{
-    
-    position: relative;
-    width: 40em;
-    height: 40em;
-    left: 4em;
-    top: 7.7em;
-    
-    
+nav {
+  position: absolute;
+  right: 0;
+}
+nav ul {
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em 1.5em 0em 1.5em;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 0em 0.75em;
+  background-color: #37e473;
+  text-shadow: 1px 1px 2px black;
+}
+nav a:hover {
+  color: #202020;
+}
+#top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 28vh;
+  max-height: 18vw;
+  min-width: 7vw;
+
+  z-index: -1;
+}
+#controller {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  max-width: 400px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  z-index: -1;
+}
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "harshit harshit-text harshit-text"
+    "sarthak-text sarthak-text sarthak";
+}
+.harshit {
+  animation: harshit 1s;
+  position: relative;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    ". tweet1 in1 ."
+    ". git1 insta1 .";
+  grid-area: harshit;
 }
 
-.box-2{
+.harshit-text {
+  animation: harshit-text 1s;
+  grid-area: harshit-text;
+  color: #faff00;
+  margin: auto 0px;
+}
+.sarthak {
+  animation: sarthak 1s;
+  grid-area: sarthak;
+  position: relative;
+  height: 50vh;
 
-    position: absolute;
-    width: 25.1em;
-    height: 24.3em;
-    left: 70em;
-    top: 17.4em;
-    
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    ". insta2 git2 ."
+    ". in2 tweet2 .";
+}
+.sarthak-text {
+  animation: sarthak-text 1s;
+  grid-area: sarthak-text;
+  color: #faff00;
+  margin: auto 0px;
+  text-align: right;
+}
+.harshit #hr {
+  display: flex;
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  width: 70%;
+  max-height: 50%;
+  z-index: 1;
+}
+.sarthak #sv {
+  display: flex;
+  position: absolute;
+  justify-self: center;
+  align-self: center;
+  width: 70%;
+  max-height: 50%;
+  z-index: 1;
+}
+.harshit .tweet {
+  grid-area: tweet1;
+}
+.harshit .in {
+  grid-area: in1;
+}
+.harshit .git {
+  grid-area: git1;
+}
+.harshit .insta {
+  grid-area: insta1;
+}
+.sarthak .tweet {
+  grid-area: tweet2;
+}
+.sarthak .in {
+  grid-area: in2;
+}
+.sarthak .git {
+  grid-area: git2;
+}
+.sarthak .insta {
+  grid-area: insta2;
+}
+.tweet,
+.in,
+.git,
+.insta {
+  opacity: 0.6;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  z-index=-1;
+}
+.tweet:hover,
+.in:hover,
+.git:hover,
+.insta:hover {
+  opacity: 1;
+  z-index=-1;
+}
+.icon {
+  width: 57px;
 }
 
-#hr .box-1{
-
-    position: absolute;
-    width: 14.8em;
-    height: 15em;
-    left: 6.6em;
-    top: 13.3em;
-}
-#sv .box-2{
-    position: absolute;
-    width: 14.7em;
-    height: 15.7em;
-    left: 70.75em;
-    top: 22.21em;
-}
-
-#fb1{
-
-
-    position: absolute;
-width: 4.2em;
-height: 4.5em;
-left: 7;
-top: 28em;
-}
-
-
-#tweet1 {
-    position: absolute;
-width: 70.61px;
-height: 72.2px;
-left: 251.09px;
-top: 500px;
-}
-
-#insta1 {
-
-    position: absolute;
-width: 86.95px;
-height: 83.16px;
-left: 338.05px;
-top: 200px;
-}
-
-#git1 {
-
-    position: absolute;
-width: 90.88px;
-height: 70.91px;
-left: 179.18px;
-top: 0;
-
-}
-
-#in1{
-
-    position: absolute;
-width: 5.62em;
-height: 80.58px;
-left: 0;
-top: 12.5em;
-}
-
-
-#fb2{
-
-
- 
-}
-
-
-#tweet2 {
- 
-}
-
-#insta2 {
-
-}
-
-#git2 {
-
-
-}
-
-#in2{
-
+#bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 28vh;
+  max-height: 18vw;
+  min-width: 7vw;
+  z-index: -1;
+  transform: rotate(180deg);
 }
