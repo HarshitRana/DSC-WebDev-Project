@@ -189,14 +189,12 @@ main {
   display: flex;
   justify-self: center;
   align-self: center;
-  z-index=-1;
 }
 .tweet:hover,
 .in:hover,
 .git:hover,
 .insta:hover {
   opacity: 1;
-  z-index=-1;
 }
 .icon {
   width: 57px;
